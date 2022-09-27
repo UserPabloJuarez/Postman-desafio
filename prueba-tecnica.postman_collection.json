@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "eadb8b15-0418-44a5-adfb-7572be18a92f",
+		"name": "prueba-tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"pjuarez\",\r\n  \"password\": \"pjuarez\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/tata/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"tata",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consulta moneda",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwanVhcmV6In0.3ywdMFn812BBaAZszNAFe3E_cvw8Wnu6_DN4w02-Mr4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/tata/currency",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"tata",
+						"currency"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizacion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwanVhcmV6In0.3ywdMFn812BBaAZszNAFe3E_cvw8Wnu6_DN4w02-Mr4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"codigoDivisa\": \"PEN\",\r\n    \"nombre\": \"Sol(es) peruano(s)\",\r\n    \"tipoCambio\": 3.75\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/tata/currency/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"tata",
+						"currency",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
